@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<h1>这是user/login.html模板</h1>
+<form action="/user/login" method="post">
+    {% csrf_token %}
+    <div>
+        <lable>用户名</lable>
+        <input type="text" name="username"
+               value="{{ username }}">
+    </div>
+    <div>
+        <lable>密码</lable>
+        <input type="password" name="password">
+    </div>
+    <div>
+        <lable for="id_remember">记住密码</lable>
+        <input type="checkbox" name="remember" id=""id_remember
+               value="1">
+    </div>
+    <div>
+        <input type="submit" value="登录">
+    </div>
+</form>
+
+</body>
+</html>

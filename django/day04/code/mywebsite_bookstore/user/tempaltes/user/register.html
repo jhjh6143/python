@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h3>这是系统内的用户注册</h3>
+<form action="/user/reg" method="post">
+    {% csrf_token %}
+    <div>
+        <lable>用户名</lable>
+        <input type="text" name="username">
+        <span>{{ username_error }}</span>
+    </div>
+    <div>
+        <lable>密码</lable>
+        <input type="text" name="password">
+    </div>
+        <div>
+        <lable>密码（重复）</lable>
+        <input type="password" name="password2">
+    </div>
+</form>
+
+</body>
+</html>

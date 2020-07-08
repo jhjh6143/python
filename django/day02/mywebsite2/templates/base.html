@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>首页</title>
+    {% endblock %}
+    <style>
+        body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        container{
+            width: 100px;
+            margin: 0 auto;
+        }
+        #top{
+            width: 1000px;
+            height: 100px;
+            background: yellow;
+        }
+        #main #main-left{
+            width: 500px;
+            height: 500px;
+            background: pink;
+        }
+        #main #main-left{
+            width: 500px;
+            height: 500px;
+            background: blue;
+        }
+        #foot{
+            width: 1000px;
+            height: 100px;
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="top">
+        顶部
+    </div>
+
+    {% block center_content %}
+    <div id="main">
+        <h1>中间内容部</h1>
+        <h1>首页内容</h1>
+    </div>
+    {% endblock center_content %}
+
+    <div id="foot">
+        关于本网站
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社保计算器</title>
+</head>
+<body>
+    <form action="/shebao" method="POST">
+        <div>
+        请输入基数<input type="input" name="income">
+        </div>
+        <div>
+        请输入选择户口
+        <select name="is_city">
+            <option value="1">城镇户口</option>
+            <option value="0">农村户口</option>
+        </select>
+        </div>
+        <input type="submit">
+    </form>
+    {% if base %}
+    <h1>结果如下</h1>
+<table>
+    <thead>
+    <tr>
+        <td style="text-align: center">项目</td>
+        <td style="text-align: center">个人缴纳</td>
+        <td style="text-align: center">单位缴纳</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align: center">养老保险</td>
+        <td style="text-align: center">{{yl_gr}}元</td>
+        <td style="text-align: center">{{yl_dw}}元</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">失业保险</td>
+        <td style="text-align: center">xxx元</td>
+        <td style="text-align: center">xxx元</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">工商保险</td>
+        <td style="text-align: center">xxx元</td>
+        <td style="text-align: center">xxx元</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">生育保险</td>
+        <td style="text-align: center">xxx元</td>
+        <td style="text-align: center">xxx元</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">医疗保险</td>
+        <td style="text-align: center">xxx元</td>
+        <td style="text-align: center">xxx元</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">公积金</td>
+        <td style="text-align: center">xxx元</td>
+        <td style="text-align: center">xxx元</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">纳入国家金额总和</td>
+        <td style="text-align: center">xxx元</td>
+        <td style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">个人缴费总和</td>
+        <td style="text-align: center">xxx元</td>
+        <td style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td style="text-align: center">纳入国家金额总和</td>
+        <td style="text-align: center">xxx元</td>
+        <td style="text-align: center"></td>
+    </tr>
+    </tbody>
+</table>
+{% endif %}
+</body>
+</html>

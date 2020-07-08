@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签测试</title>
+</head>
+<body>
+{% if has_car %}
+<h1>{{name}}有车</h1>
+{% else %}
+<h1>{{name}}没有车</h1>
+{% endif %}
+<h1>---------------------</h1>
+<h1>{{name}}{% if has_car %}有{% else %}没有{% endif %}车</h1>
+他是：{% if age < 10 %}儿童{% elif age > 60 %}老年人{% else %}其他{% endif %}
+<h1>----------以下测试for标签来生成无序列表-----------</h1>
+</body>
+<ul>
+    {% for x in fav %}
+    {% if forloop.first%}
+    <li>-----------------------------------</li>
+    {% endif %}
+    <li style="color: {% cycle 'red' 'blue' %};">第{{forloop.counter}}个爱好{{x}}</li>
+    {% empty %}
+    <li>------爱好为0-----</li>
+    {% endfor %}
+</ul>
+</html>

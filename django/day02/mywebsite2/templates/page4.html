@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>string={{string}}</h1>
+<h1>大小内容是{{string|upper}}</h1>
+<h1>省略后的内容是{{string|truncatechars:14}}</h1>
+<h1>{{string|truncatechars:12|upper}}</h1>
+
+{% autoescape on %}
+{{a}}
+{% endautoescape %}
+</body>
+</html>

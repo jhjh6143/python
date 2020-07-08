@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试表单</title>
+</head>
+<body>
+<form action="http://127.0.0.1:8000/test_form" method="POST">
+    <div>
+        <input type="text" name="nickname">
+    </div>
+    <div>
+        基数<input type="text" name="income">
+    </div>
+    <div>
+        是否城市户口<input type="text" name="is_city">
+    </div>
+    <div>
+        <input type="submit" value="提交">
+    </div>
+    <div>
+        爱好<input type="checkbox" name="fav" value="看书">
+        <input type="checkbox" name="fav" value="看电影">
+        <input type="checkbox" name="fav" value="写代码">
+    </div>
+    <div>
+        <textarea rows="10" cols="20">这是记事内容</textarea>
+    </div>
+</form>
+
+</body>
+</html>
